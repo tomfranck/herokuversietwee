@@ -1,0 +1,32 @@
+<a href="/"><% include header %></a>
+
+		<div class="topbalk">
+			<a href="/">Home</a>
+		 <a href="/">Photos</a>
+		 <a href="/">Exhibitions</a>
+		 <a href="/">Art</a>
+		 <a href="/">Contact</a>
+
+		</div>
+
+<br/>
+
+  <% for (var i = 0; i < items.length; i++) { %>
+    <% if (items[i].periodes.indexOf(periodes[id]) !== -1) { %>
+      <section>
+
+            <a href=/periodes/<%- items[i].id %>><img src="/img/<%- items[i].afbeeldings %>" alt="<%- items[i].titel %>"></a>
+
+
+          <p>
+            <%- items[i].samenvatting %>
+        </p>
+
+
+
+      </section>
+      <br><hr><br>
+    <% } %>
+  <% } %>
+
+<% include footer %>

@@ -1,0 +1,39 @@
+<% include header %>
+
+		<div class="topbalk">
+		  <a href="/">Home</a>
+		  <a href="/">Photos</a>
+		  <a href="/">Exhibitions</a>
+		  <a href="/">Art</a>
+			<a href="/">Contact</a>
+
+		</div>
+
+		<nav>
+			Filter:
+		  <% for (var i = 0; i < categorieen.length; i++) { %>
+		<a href="/categorieen/<%- i %>"><%- categorieen[i] %></a>
+		  <% } %>
+		</nav>
+
+
+<br/>
+
+		  <% var teller = 1; %>
+		  <% nieuws.forEach(function(item){ %>
+		    <section>
+					<h4>
+						<a href=/items/<%- item.id %>><%- item.titel %></a>
+					</h4>
+					<p class="title">
+					<% for (var i = 0; i < item.periodes.length; i++) { %>
+						<a class="auteursvakje" href="/periodes/<%- i %>"><%- item.periodes[i] %></a><% if (i+1< item.periodes.length){ %> <% } %>
+					<% } %>
+				</p>
+						<a href=/items/<%- item.id %>><img src="/img/<%- item.afbeeldings %>" alt="<%- item.titel %>"></a>
+						<br/><br/>
+		    </section>
+		    <% teller++;}); %>
+
+
+		<% include footer %>

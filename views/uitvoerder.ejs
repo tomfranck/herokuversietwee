@@ -1,0 +1,42 @@
+<a href="/"><% include header %></a>
+
+		<div class="topbalk">
+      <a href="/">Home</a>
+     <a href="/">Photos</a>
+     <a href="/">Exhibitions</a>
+     <a href="/">Art</a>
+     <a href="/">Contact</a>
+
+		</div>
+
+<nav>
+  Filter:
+  <% for (var i = 0; i < uitvoerders.length; i++) { %>
+<a href="/uitvoerders/<%- i %>"><%- uitvoerders[i] %></a>
+  <% } %>
+  <br/>
+  <h2 class="categoriebloktekst">You're looking in <span id="categorieblok"><%- uitvoerders[id] %></span></h2>
+  <a class="removefilters" href="/">X Remove filters</a>
+</nav>
+
+<br/>
+
+  <% for (var i = 0; i < items.length; i++) { %>
+    <% if (items[i].uitvoerders.indexOf(uitvoerders[id]) !== -1) { %>
+      <section>
+
+            <a href=/items/<%- items[i].id %>><img src="/img/<%- items[i].afbeeldings %>" alt="<%- items[i].titel %>"></a>
+
+
+          <p>
+            <%- items[i].samenvatting %>
+        </p>
+
+
+
+      </section>
+      <br><hr><br>
+    <% } %>
+  <% } %>
+
+<% include footer %>

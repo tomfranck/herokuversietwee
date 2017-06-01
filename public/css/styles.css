@@ -1,0 +1,279 @@
+@import url('https://fonts.googleapis.com/css?family=Lato');
+
+body {
+  font-family: helvetica;
+  width: 90%;
+  margin: 25px auto;
+  line-height: 1.4em;
+}
+
+.topbalk {
+  background: #19626c;
+  width: 98%;
+  color: dimgrey;
+  padding: 1%;
+  border: 1px solid #19626c;
+}
+
+.topbalk a {
+  color:white;
+  text-decoration: none;
+  padding: 1px 5px 0px 5px;
+  margin-left: 12%;
+}
+
+.topbalk a:hover {
+  color: black;
+  text-decoration: none;
+  background-color: white;
+  font-weight:bold;
+}
+
+.titelbalk {
+  font-family: 'Lato';
+  font-size: 75px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #2ecc71;
+  margin-bottom:25px;
+  margin-top:80px;
+}
+
+.titelbalk:hover {
+  padding-right:3px;
+  cursor:pointer;
+  opacity: 0.8;
+}
+
+section {
+  color:black;
+}
+
+nav {
+  background-color: white;
+  border: 1px solid #19626c;
+  width: 98%;
+  padding: 1%;
+  text-align: center;
+  word-spacing: 10px;
+  font-family: 'Lato', sans-serif;
+}
+
+a {
+  color: #3d3d3d;
+  text-decoration: none;
+}
+
+a:hover {
+  font-weight:bold;
+}
+
+.title {
+  font-family: 'Lato', sans-serif;
+  padding: 1%;
+  margin-top: 1%;
+  margin-left: 1%;
+  margin-right:10%;
+  position: absolute;
+  text-transform: uppercase;
+  text-align:center;
+}
+
+.title a {
+  color:white;
+  font-size: 20px;
+  text-align:center;
+}
+
+.title2 {
+  font-family: 'Lato', sans-serif;
+  background-color: white;
+  padding: 1%;
+  margin-top: 25%;
+  padding-left: 2%;
+  position: absolute;
+  text-transform: uppercase;
+  color: #3d3d3d;
+}
+
+#categorieblok {
+  color: black;
+  border: 1px solid black;
+  padding: 3px;
+  text-transform: uppercase;
+  background-color: white;
+  font-weight: bolder;
+  word-spacing: 2px;
+}
+
+.categoriebloktekst {
+  font-size: 1em;
+  font-weight: bolder;
+  word-spacing: 2px;
+}
+
+.bannerheader {
+  min-width: 100%;
+}
+
+.removefilters {
+  text-decoration: none;
+  margin-top: 0;
+  word-spacing: 2px;
+}
+
+h1 {
+  border: 1px solid black;
+  width:30%;
+  padding-left:4%;
+}
+
+section {
+  margin-bottom: -2%;
+}
+
+img {
+  max-width: 100%;
+}
+
+p {
+  margin: 10px 0;
+  color: #3d3d3d;
+  font-weight: bolder;
+}
+
+h2 {
+  margin: 25px 0;
+  font-weight:bold;
+  font-size: 20px;
+}
+
+h3 {
+}
+
+h4 {
+  background-color: #19626c;
+  color:white;
+  font-size:12px;
+  padding-left:5px;
+}
+
+h4 a {
+  background-color: #19626c;
+  color:white;
+  font-size:12px;
+  padding-left:5px;
+}
+
+nav a {
+  display: inline-block;
+  margin-right: 5px;
+}
+
+footer {
+  margin-top:20px;
+  text-align:center;
+  font-weight:bold;
+  border: 1px solid black;
+  padding: 20px;
+}
+
+footer a {
+  font-size: 12px;
+}
+
+.categorieenvakjes {
+  border: 1px solid #19626c;
+  font-size: 15px;
+  padding:2px;
+}
+
+.auteursvakje {
+  color:white;
+  font-size: 11px;
+  padding:7px;
+  background-color:#19626c;
+}
+
+@media screen and (max-width: 1100px) {
+  .topbalk a {
+    margin-left: 9%;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .topbalk a {
+    margin-left: 8%;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .topbalk a {
+    margin-left: 6%;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .topbalk a {
+    margin-left: 5%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  a {
+      font-size: .5em;
+  }
+
+  .topbalk a {
+    margin-left: 10%;
+  }
+}
+
+
+@media screen and (max-width: 480px) {
+    a {
+        font-size: .5em;
+    }
+
+    .topbalk a {
+      color:white;
+      text-decoration: none;
+      padding: 1px 5px 0px 5px;
+      margin-left: 6%;
+    }
+
+    .title {
+      margin-top: 1%;
+      padding-left: 1%;
+      margin-left:-1%;
+    }
+
+    .title a {
+      color:white;
+      font-size: 10px;
+    }
+
+    .title2 {
+      font-family: 'Lato', sans-serif;
+      padding: 1%;
+      margin-top: 25%;
+      padding-left: 2%;
+    }
+
+    h2 {
+      font-size: 25px;
+    }
+
+    #categorieblok {
+      color: black;
+      border: 1px solid black;
+      padding: 3px;
+      text-transform: uppercase;
+      font-weight: bolder;
+    }
+
+    .categoriebloktekst {
+      font-size: .6em;
+      font-weight: bolder;
+    }
+}
