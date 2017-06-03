@@ -19,8 +19,13 @@
 
 <br/>
 
+<form action="/zoeken" method="get">
+	<input type="text" name="titel" placeholder="Search...">
+	<input type="submit" value="Submit">
+</form>
+
 		  <% var teller = 1; %>
-		  <% nieuws.forEach(function(item){ %>
+		  <% museum.forEach(function(item){ %>
 		    <section>
 					<h4>
 						<a href=/items/<%- item.id %>><%- item.titel %></a>
@@ -31,7 +36,8 @@
 					<% } %>
 				</p>
 						<a href=/items/<%- item.id %>><img src="/img/<%- item.afbeeldings %>" alt="<%- item.titel %>"></a>
-						<br/><br/>
+						<h5><%- item.samenvatting %> <a href=/items/<%- item.id %>>READ MORE</a></h5>
+						<br/>
 		    </section>
 		    <% teller++;}); %>
 

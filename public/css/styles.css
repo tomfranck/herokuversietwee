@@ -146,6 +146,11 @@ h2 {
   margin: 25px 0;
   font-weight:bold;
   font-size: 20px;
+  background-color: #19626c;
+  color:white;
+  padding:1%;
+  line-height:30px;
+  padding:1%;
 }
 
 h3 {
@@ -156,13 +161,36 @@ h4 {
   color:white;
   font-size:12px;
   padding-left:5px;
+  padding:1%;
 }
 
 h4 a {
   background-color: #19626c;
   color:white;
-  font-size:12px;
+  font-size:14px;
   padding-left:5px;
+  font-weight:bold;
+}
+
+h5 {
+  background-color: #19626c;
+  color:white;
+  font-size:12px;
+  padding-left:10px;
+  margin-bottom: 20px;
+  margin-top: -10px;
+  padding:1%;
+}
+
+h5 a {
+  background-color: #19626c;
+  color:white;
+  font-size:12px;
+  padding-left:10px;
+  margin-bottom: 20px;
+  margin-top: -10px;
+  padding:1%;
+  font-weight:bold;
 }
 
 nav a {
@@ -195,9 +223,43 @@ footer a {
   background-color:#19626c;
 }
 
+
+input[type=submit] {
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 20px;
+  background: #19626c;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+  border: 2px solid #19626c;
+  margin-bottom:20px;
+}
+
+input[type=submit]:hover {
+  opacity: 0.7;
+  text-decoration: none;
+  cursor:pointer;
+}
+
+input[type=text] {
+  color: #19626c;
+  font-size: 20px;
+  background: white;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+  margin-bottom:20px;
+  border: 2px solid #19626c;
+  width:85%;
+}
+
+
 @media screen and (max-width: 1100px) {
   .topbalk a {
     margin-left: 9%;
+  }
+
+  input[type=text] {
+  width:80%;
   }
 }
 
@@ -205,17 +267,29 @@ footer a {
   .topbalk a {
     margin-left: 8%;
   }
+
+  input[type=text] {
+  width:75%;
+  }
 }
 
 @media screen and (max-width: 800px) {
   .topbalk a {
     margin-left: 6%;
   }
+
+  input[type=text] {
+  width:70%;
+  }
 }
 
 @media screen and (max-width: 700px) {
   .topbalk a {
     margin-left: 5%;
+  }
+
+  input[type=text] {
+  width:70%;
   }
 }
 
@@ -226,6 +300,10 @@ footer a {
 
   .topbalk a {
     margin-left: 10%;
+  }
+
+  input[type=text] {
+  width:60%;
   }
 }
 
@@ -275,5 +353,9 @@ footer a {
     .categoriebloktekst {
       font-size: .6em;
       font-weight: bolder;
+    }
+
+    input[type=text] {
+    width:55%;
     }
 }

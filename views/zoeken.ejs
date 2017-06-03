@@ -1,0 +1,57 @@
+<% include header %>
+
+		<div class="topbalk">
+		  <a href="/">Home</a>
+		  <a href="/">Photos</a>
+		  <a href="/">Exhibitions</a>
+		  <a href="/">Art</a>
+			<a href="/">Contact</a>
+
+		</div>
+
+		<nav>
+			Filter:
+		  <% for (var i = 0; i < categorieen.length; i++) { %>
+		<a href="/categorieen/<%- i %>"><%- categorieen[i] %></a>
+		  <% } %>
+		</nav>
+
+
+<br/>
+
+<!-- via de get method en dan bij app.js staat de code -->
+<form action="/zoeken" method="get">
+	<input type="text" name="titel" placeholder="Search...">
+	<input type="submit" value="Submit">
+</form>
+
+
+
+  <% for (var i = 0; i < items.length; i++) { %>
+    <%if ("tags" in items[i]){ %>
+    <% if (items[i].tags.indexOf(term) !== -1) { %>
+
+        <section>
+          <h4>
+            <a href=/items/<%- items[i].id %>><%- items[i].titel %></a>
+          </h4>
+
+          <p class="title">
+            <a class="auteursvakje" href="/periodes/<%- i %>"><%- items[i].periodes %></a>
+          </p>
+
+            <a href=/items/<%- items[i].id %>><img src="/img/<%- items[i].afbeeldings %>" alt="<%- items[i].titel %>"></a>
+            <h5>
+              <%- items[i].samenvatting %> <a href=/items/<%- items[i].id %>>READ MORE</a>
+            </h5>
+
+
+        </section>
+
+
+<%  } %>
+      <% } %>
+
+  <% } %>
+
+<% include footer %>

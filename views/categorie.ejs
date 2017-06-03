@@ -24,13 +24,19 @@
   <% for (var i = 0; i < items.length; i++) { %>
     <% if (items[i].categorieen.indexOf(categorieen[id]) !== -1) { %>
       <section>
+				<h4>
+					<a href=/items/<%- items[i].id %>><%- items[i].titel %></a>
+				</h4>
 
-            <a href=/items/<%- items[i].id %>><img src="/img/<%- items[i].afbeeldings %>" alt="<%- items[i].titel %>"></a>
+				<p class="title">
+					<a class="auteursvakje" href="/periodes/<%- i %>"><%- items[i].periodes %></a>
+				</p>
 
-
-          <p>
-            <%- items[i].samenvatting %>
-        </p>
+				<a href=/items/<%- items[i].id %>><img src="/img/<%- items[i].afbeeldings %>" alt="<%- items[i].titel %>"></a>
+				<h5>
+					<br/>
+					<%- items[i].samenvatting %> <a href=/items/<%- items[i].id %>>READ MORE</a>
+				</h5>
 
 
 

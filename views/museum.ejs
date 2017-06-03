@@ -17,7 +17,6 @@
     <h2>
       <%- item.titel %>
     </h2>
-
 		<p>
 			<% for (var i = 0; i < item.periodes.length; i++) { %>
 				<a class="auteursvakje" href="/periodes/<%- i %>"><%- item.periodes[i] %></a><% if (i+1< item.periodes.length){ %> <% } %>
@@ -39,10 +38,11 @@
 <img src="/img/<%- item.afbeeldingextra %>" alt="<%- item.titel %>">
 
     <p>Category:
-
-      <% for (var i = 0; i < item.categorieen.length; i++) { %>
-        <a class="categorieenvakjes" href="/categorieen/<%- i %>"><%- item.categorieen[i] %></a><% if (i+1< item.categorieen.length){ %> <% } %>
+			<!-- om op een categorie te klikken die onderaan een artikel staat, werk je op deze manier. Ik heb een extra ID toegevoegd bij elke categorie! We beginnen te tellen vanaf 0 !! -->
+      <% for (var i = 0; i < item.categorieen.length-1; i++) { %>
+        <a class="categorieenvakjes" href="/categorieen/<%- item.categorieen[1] %>"><%- item.categorieen[0] %></a><% if (i+1< item.categorieen.length){ %> <% } %>
       <% } %>
+
     </p>
 
     <p>Related tags:
