@@ -16,7 +16,7 @@
     "node",
     "express"
   ],
-  "author": "Kristof Michiels",
+  "author": "Tom Franck",
   "license": "ISC",
   "homepage": "",
   "dependencies": {
