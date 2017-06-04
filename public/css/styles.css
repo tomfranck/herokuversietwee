@@ -1,7 +1,7 @@
-@import url('https://fonts.googleapis.com/css?family=Lato');
+@import url('https://fonts.googleapis.com/css?family=Lato'); /* voor de titels */
 
 body {
-  font-family: helvetica;
+  font-family: 'helvetica';
   width: 90%;
   margin: 25px auto;
   line-height: 1.4em;
@@ -151,9 +151,7 @@ h2 {
   padding:1%;
   line-height:30px;
   padding:1%;
-}
-
-h3 {
+  margin-bottom:10px;
 }
 
 h4 {
@@ -214,6 +212,7 @@ footer a {
   border: 1px solid #19626c;
   font-size: 15px;
   padding:2px;
+  line-height: 30px; /* zodat de tags niet allemaal op elkaar staan */
 }
 
 .auteursvakje {
@@ -223,7 +222,7 @@ footer a {
   background-color:#19626c;
 }
 
-
+/* zoekbalk knopje */
 input[type=submit] {
   font-family: Arial;
   color: #ffffff;
@@ -241,6 +240,7 @@ input[type=submit]:hover {
   cursor:pointer;
 }
 
+/* zoekbalk zelf */
 input[type=text] {
   color: #19626c;
   font-size: 20px;
@@ -307,10 +307,13 @@ input[type=text] {
   }
 }
 
+.datumkleur {
+  color: #19626c;
+}
 
 @media screen and (max-width: 480px) {
     a {
-        font-size: .5em;
+        font-size: .6em;
     }
 
     .topbalk a {
@@ -356,6 +359,6 @@ input[type=text] {
     }
 
     input[type=text] {
-    width:55%;
+      width:55%;
     }
 }

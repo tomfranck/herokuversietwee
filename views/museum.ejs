@@ -18,18 +18,20 @@
       <%- item.titel %>
     </h2>
 		<p>
-			<% for (var i = 0; i < item.periodes.length; i++) { %>
-				<a class="auteursvakje" href="/periodes/<%- i %>"><%- item.periodes[i] %></a><% if (i+1< item.periodes.length){ %> <% } %>
+
+			<% for (var j = 0; j < item.periodes.length-1; j++) { %>
+        <a class="auteursvakje" href="/periodes/<%- item.periodes[1] %>"><%- item.periodes[0] %></a><% if (j+1< item.periodes.length){ %> <% } %>
+      <% } %>
+
+			<% for (var k = 0; k < item.periodes.length-1; k++) { %>
+				<a class="auteursvakje" href="/uitvoerders/<%- item.uitvoerders[1] %>"><%- item.uitvoerders[0] %></a><% if (k+1< item.uitvoerders.length){ %> <% } %>
 			<% } %>
 
-			<% for (var i = 0; i < item.uitvoerders.length; i++) { %>
-				<a class="auteursvakje" href="/uitvoerders/<%- i %>"><%- item.uitvoerders[i] %></a><% if (i+1< item.uitvoerders.length){ %> <% } %>
-			<% } %>
 		</p>
 
     <img src="/img/<%- item.afbeeldingl %>" alt="<%- item.titel %>">
 
-    <p><%- item.datum %></p>
+    <p class="datumkleur"><%- item.datum %></p>
 
     <p>
       <%- item.body %>

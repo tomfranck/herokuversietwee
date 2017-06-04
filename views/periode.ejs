@@ -11,23 +11,27 @@
 
 <br/>
 
+<h1><a href="/">&larr; Return to homepage</a></h1>
 
-  <% for (var i = 0; i < items.length; i++) { %>
-    <% if (items[i].periodes.indexOf(periodes[id]) !== -1) { %>
-      <section>
+<br/>
 
-            <a href=/periodes/<%- items[i].id %>><img src="/img/<%- items[i].afbeeldings %>" alt="<%- items[i].titel %>"></a>
-
-
-          <p>
-            <%- items[i].samenvatting %>
-        </p>
-
+<% for (var i = 0; i < items.length; i++) { %>
+	<% if (items[i].periodes.indexOf(periodes[id]) !== -1) { %>
+		<section>
+			<h4>
+				<a href=/items/<%- items[i].id %>><%- items[i].titel %></a>
+			</h4>
 
 
-      </section>
-      <br><hr><br>
-    <% } %>
-  <% } %>
+
+			<a href=/items/<%- items[i].id %>><img src="/img/<%- items[i].afbeeldings %>" alt="<%- items[i].titel %>"></a>
+			<h5>
+				<br/>
+				<%- items[i].samenvatting %> <a href=/items/<%- items[i].id %>>READ MORE</a>
+			</h5>
+		</section>
+		<br><hr><br>
+	<% } %>
+	<% } %>
 
 <% include footer %>
